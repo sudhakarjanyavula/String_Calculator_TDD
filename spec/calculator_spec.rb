@@ -60,4 +60,14 @@ describe Calculator do
         expect(sum).to eql(6)
       end
     end
+
+    context "Given a list of numbers" do
+      it "throws an exception when multiple negative numbers are present" do
+        expect { @calc.negativeNumber("-1,-2,-3,-4,-5") }.to raise_error("negative numbers not allowed -1,-2,-3,-4,-5")
+      end
+  
+      it "throws an exception with all negative numbers listed when both positive and negative numbers are present" do
+        expect { @calc.negativeNumber("-1,2,-3,4,-5") }.to raise_error("negative numbers not allowed -1,-3,-5")
+      end
+    end
 end

@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2024-05-15T22:17:51+05:30">2024-05-15T22:17:51+05:30</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2024-05-15T22:19:58+05:30">2024-05-15T22:19:58+05:30</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">51.11%</span></span>
+    (<span class="covered_percent"><span class="red">54.72%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.91
+       <span class="green">
+         1.14
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>8</b> files in total.
-    <b>45</b> relevant lines. 
-    <span class="green"><b>23</b> lines covered</span> and
-    <span class="red"><b>22</b> lines missed </span>
+    <b>53</b> relevant lines. 
+    <span class="green"><b>29</b> lines covered</span> and
+    <span class="red"><b>24</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -122,12 +122,12 @@
       
       <tr>
         <td class="strong"><a href="#74ee292ce60143111448657b04bbe3a647809a7b" class="src_link" title="lib/calculator.rb">lib/calculator.rb</a></td>
-        <td class="yellow strong">88.0 %</td>
-        <td>43</td>
-        <td>25</td>
-        <td>22</td>
-        <td>3</td>
-        <td>1.6</td>
+        <td class="yellow strong">84.85 %</td>
+        <td>57</td>
+        <td>33</td>
+        <td>28</td>
+        <td>5</td>
+        <td>1.8</td>
       </tr>
       
     </tbody>
@@ -431,20 +431,20 @@
           <div class="file_list_container" id="Libraries">
   <h2>
     <span class="group_name">Libraries</span>
-    (<span class="covered_percent"><span class="yellow">88.0%</span></span>
+    (<span class="covered_percent"><span class="yellow">84.85%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.6
+         1.8
        </span>
     </span> hits/line)
   </h2>
   <a name="Libraries"></a>
   <div>
     <b>1</b> files in total.
-    <b>25</b> relevant lines. 
-    <span class="green"><b>22</b> lines covered</span> and
-    <span class="red"><b>3</b> lines missed </span>
+    <b>33</b> relevant lines. 
+    <span class="green"><b>28</b> lines covered</span> and
+    <span class="red"><b>5</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -462,12 +462,12 @@
       
       <tr>
         <td class="strong"><a href="#74ee292ce60143111448657b04bbe3a647809a7b" class="src_link" title="lib/calculator.rb">lib/calculator.rb</a></td>
-        <td class="yellow strong">88.0 %</td>
-        <td>43</td>
-        <td>25</td>
-        <td>22</td>
-        <td>3</td>
-        <td>1.6</td>
+        <td class="yellow strong">84.85 %</td>
+        <td>57</td>
+        <td>33</td>
+        <td>28</td>
+        <td>5</td>
+        <td>1.8</td>
       </tr>
       
     </tbody>
@@ -777,11 +777,11 @@
         <div class="source_table" id="74ee292ce60143111448657b04bbe3a647809a7b">
   <div class="header">
     <h3>lib/calculator.rb</h3>
-    <h4><span class="yellow">88.0 %</span> covered</h4>
+    <h4><span class="yellow">84.85 %</span> covered</h4>
     <div>
-      <b>25</b> relevant lines. 
-      <span class="green"><b>22</b> lines covered</span> and
-      <span class="red"><b>3</b> lines missed.</span>
+      <b>33</b> relevant lines. 
+      <span class="green"><b>28</b> lines covered</span> and
+      <span class="red"><b>5</b> lines missed.</span>
     </div>
   </div>
   
@@ -1037,10 +1037,94 @@
         <li class="never" data-hits="" data-linenumber="42">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="43">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def negativeNumber(numbers)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="44">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      if numbers.empty?</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="45">
+          
+          
+          <code class="ruby">        return 0</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby">      else</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="47">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        nums = numbers.split(&quot;,&quot;).map(&amp;:to_i)</code>
+        </li>
+      
+        <li class="covered" data-hits="12" data-linenumber="48">
+          <span class="hits">12</span>
+          
+          <code class="ruby">        negatives = nums.select { |num| num &lt; 0 }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="49">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        if negatives.any?</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="50">
+          <span class="hits">2</span>
+          
+          <code class="ruby">          raise &quot;negative numbers not allowed #{negatives.join(&quot;,&quot;)}&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby">        else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="52">
+          
+          
+          <code class="ruby">          return nums.reduce(0, :+)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby">    end   </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
           <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="57">
           
           
           <code class="ruby">  </code>

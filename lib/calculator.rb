@@ -39,5 +39,19 @@ class Calculator
         return nums.reduce(0, :+)
       end
     end
+
+    def negativeNumber(numbers)
+      if numbers.empty?
+        return 0
+      else
+        nums = numbers.split(",").map(&:to_i)
+        negatives = nums.select { |num| num < 0 }
+        if negatives.any?
+          raise "negative numbers not allowed #{negatives.join(",")}"
+        else
+          return nums.reduce(0, :+)
+        end
+      end
+    end   
 end
   
