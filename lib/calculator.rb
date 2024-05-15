@@ -21,7 +21,6 @@ class Calculator
       if numbers.empty?
         return 0
       else
-        binding.pry
         nums = numbers.split(/[,\n]/).map(&:to_i)
         return nums.reduce(0, :+)
       end
