@@ -22,10 +22,30 @@ describe Calculator do
         expect(sum).to eql(5)
       end
     end
+
+    
     context "Given multiple numbers" do
       it "returns the sum of multiple numbers" do
         sum = @calc.multiple_numbers("1,2,3,4,5")
         expect(sum).to eql(15)
+      end
+    end
+
+
+    context "Given multiple numbers separated by commas and/or new lines" do
+      it "handles new lines between numbers" do
+        sum = @calc.lines_between_numbers("1\n2,3")
+        expect(sum).to eql(6)
+      end
+  
+      it "ignores empty strings between commas" do
+        sum = @calc.lines_between_numbers("1,\n")
+        expect(sum).to eql(1)
+      end
+  
+      it "handles numbers separated only by new lines" do
+        sum = @calc.lines_between_numbers("1\n2\n3\n4")
+        expect(sum).to eql(10)
       end
     end
 end

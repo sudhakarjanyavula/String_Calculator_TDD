@@ -16,5 +16,15 @@ class Calculator
         return nums.reduce(0, :+)
       end
     end
+
+    def lines_between_numbers (numbers)
+      if numbers.empty?
+        return 0
+      else
+        binding.pry
+        nums = numbers.split(/[,\n]/).map(&:to_i)
+        return nums.reduce(0, :+)
+      end
+    end
 end
   

@@ -25,6 +25,15 @@
         null,
         null,
         null,
+        1,
+        3,
+        0,
+        null,
+        3,
+        3,
+        null,
+        null,
+        null,
         null
       ],
       "C:/rails/string-calculator/app/channels/application_cable/channel.rb": [
@@ -64,6 +73,6 @@
         0
       ]
     },
-    "timestamp": 1715790117
+    "timestamp": 1715790468
   }
 }
