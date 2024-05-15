@@ -23,7 +23,7 @@ describe Calculator do
       end
     end
 
-    
+
     context "Given multiple numbers" do
       it "returns the sum of multiple numbers" do
         sum = @calc.multiple_numbers("1,2,3,4,5")
@@ -46,6 +46,18 @@ describe Calculator do
       it "handles numbers separated only by new lines" do
         sum = @calc.lines_between_numbers("1\n2\n3\n4")
         expect(sum).to eql(10)
+      end
+    end
+
+    context "Given multiple numbers separated by default or custom delimiters" do
+      it "returns the sum of multiple numbers when separated by another custom delimiter" do
+        sum = @calc.differentDelimiters("//|\n4|5|6")
+        expect(sum).to eql(15)
+      end
+  
+      it "handles new lines between numbers when separated by custom delimiter" do
+        sum = @calc.differentDelimiters("//;\n1\n2;3")
+        expect(sum).to eql(6)
       end
     end
 end
